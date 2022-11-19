@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/*Mobile Screen*/
+@media (min-width: 415px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/*Medium Screen (Ipad)*/
+@media (min-width: 821px) {
+    .container {
+        width: 800px;
+    }
+}
+
+/*Big Screen*/ 
+@media (min-width: 1215px) {
+    .container {
+        width: 1115px;
+    }
+}
+
+/*Styling Header*/
+.header {
+    padding: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    width: 60px;
+}
+
+.header .links {
+    position: relative;
+}
+
+.header .links .iconBar {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header .links .iconBar span {
+    background-color: black;
+    margin-bottom: 5px;
+    height: 2px;
+    width: 100%;
+}
+
+.header .links:hover .iconBar span:nth-child(2) {
+    width: 100%;
+}
+
+.header .links .iconBar span:nth-child(2) {
+    width: 60%;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.header .links ul {
+    list-style: none;
+    background-color: #f6f6f6;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    min-width: 200px;
+    display: none;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.header .links .iconBar:hover ul {
+    display: block;
+}
+
+.header .links ul::before {
+    content: "";
+    border: 10px solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+}
+
+.header .links ul li a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+}
+.header .links ul li a:hover {
+    padding-left: 25px;
+}
+
+.header .links ul li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
