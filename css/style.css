@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
 }
+/*global Variable*/
+:root {
+    --main-color: #10cab7;
+}
 
 body {
     font-family: 'Work Sans', sans-serif;
@@ -95,6 +99,7 @@ body {
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     transition: 0.3s;
+    z-index: 100;
 }
 
 .header .links .iconBar:hover ul {
@@ -129,3 +134,67 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
+/*Styling landing section*/
+.landing {
+    background-image: url(../img/chris-herath-FcvIlm3I2Ts-unsplash\ \(1\).jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+
+.landing .message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+
+.landing .message h1 {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 3.2em;
+}
+
+.landing .message p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/*Styling featuers*/
+.feature {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: aliceblue;
+}
+
+.feature .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.feature .feat {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature .feat i {
+    color: var(--main-color);
+}
+
+.feature .feat h3 {
+    font-weight: 800;
+}
+
+.feature .feat p {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.2em;
+}
