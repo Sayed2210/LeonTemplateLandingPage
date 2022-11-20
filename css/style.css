@@ -7,6 +7,7 @@
     --secondary-color: #2c4755;
     --background-color: aliceblue;
     --padding-section: 20px;
+    --font-color: #777;
 }
 
 html {
@@ -196,6 +197,7 @@ body {
 .landing .message p {
     font-size: 1.2em;
     line-height: 1.8;
+    color: var(--font-color);
 }
 
 /*Styling featuers*/
@@ -228,7 +230,7 @@ body {
     text-align: center;
     line-height: 1.8;
     font-size: 1.2em;
-    color: #444;
+    color: var(--font-color);
 }
 
 /*Styling Services Section*/
@@ -271,7 +273,7 @@ body {
 
 .services .srv .text p {
     font-size: 1.2em;
-    color: #444;
+    color: var(--font-color);
 }
 
 .services .services-content .image {
@@ -303,3 +305,23 @@ body {
     padding-bottom: var(--padding-section);
     background-color: var(--background-color);
 }
+
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    grid-gap: 30px;
+    margin-top: 80px;
+}
+.portfolio .portfolio-content .card {
+    background-color: white;
+    padding: 20px;
+}
+.portfolio .portfolio-content .card img {
+    max-width: 100%;
+}
+.portfolio .portfolio-content .card p {
+    margin-bottom: 0;
+    font-size: 1.2em;
+    color: var(--font-color);
+}
+
