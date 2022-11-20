@@ -214,6 +214,7 @@ body {
 }
 
 .feature .feat {
+    margin-top: 20px;
     text-align: center;
     padding: 20px;
 }
@@ -323,5 +324,92 @@ body {
     margin-bottom: 0;
     font-size: 1.2em;
     color: var(--font-color);
+}
+
+/*Styling about section*/
+.about {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+    background-color: var(--background-color);
+}
+
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+@media (max-width: 820px) {
+    .about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.about .about-content .image {
+    width: 260px;
+    height: 320px;
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 820px) {
+    .about .about-content .image {
+        margin: 0 auto 50px;
+    }
+}
+
+.about .about-content .image::before {
+    content: '';
+    position: absolute;
+    height: calc(100% + 80px);
+    width: 100px;
+    left: -20px;
+    top: -40px;
+    background-color: #ebeced;
+    z-index: -1;
+}
+
+.about .about-content .image::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 220px;
+    border-left: 70px solid;
+    border-color:  var(--main-color);
+    border-bottom: 50px solid;
+    border-color: var(--main-color);
+    right: -125px;
+    top: -20px;
+    z-index: -1;
+}
+
+@media (max-width: 820px) {
+    .about .about-content .image::after,
+    .about .about-content .image::before {
+        display: none;
+    }
+}
+
+.about .about-content .text {
+    flex-basis: calc(100% - 500px);
+}
+
+.about .about-content .text p:first-child {
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.about .about-content .text p:last-child {
+    line-height: 1.6;
+    color: var(--font-color);
+}
+
+.about .about-content .text hr {
+    width: 50%;
+    color: var(--main-color);
+    border-color: var(--main-color);
+    display: inline-block;
 }
 
