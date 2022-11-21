@@ -8,6 +8,7 @@
     --background-color: aliceblue;
     --padding-section: 20px;
     --font-color: #777;
+    --main-duration: 0.3s;
 }
 
 html {
@@ -109,11 +110,11 @@ body {
 
 .header .links .iconBar span:nth-child(2) {
     width: 60%;
-    -o-transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    transition: 0.3s;
+    -o-transition: var(--main-duration);
+    -webkit-transition: var(--main-duration);
+    -moz-transition: var(--main-duration);
+    -ms-transition: var(--main-duration);
+    transition: var(--main-duration);
 }
 
 .header .links ul {
@@ -126,11 +127,11 @@ body {
     top: calc(100% + 15px);
     min-width: 200px;
     display: none;
-    -o-transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    transition: 0.3s;
+    -o-transition: var(--main-duration);
+    -webkit-transition: var(--main-duration);
+    -moz-transition: var(--main-duration);
+    -ms-transition: var(--main-duration);
+    transition: var(--main-duration);
     z-index: 100;
 }
 
@@ -152,11 +153,11 @@ body {
     display: block;
     text-decoration: none;
     color: #333;
-    -o-transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    transition: 0.3s;
+    -o-transition: var(--main-duration);
+    -webkit-transition: var(--main-duration);
+    -moz-transition: var(--main-duration);
+    -ms-transition: var(--main-duration);
+    transition: var(--main-duration);
 }
 .header .links ul li a:hover {
     padding-left: 25px;
